@@ -1,0 +1,15 @@
+.search {
+  @apply relative w-2/6;
+
+  align-items: center;
+
+  > div {
+    @apply relative;
+  }
+
+  // &::before {
+  //   content: '';
+  //   @apply absolute top-[125%] -left-[70%] h-80 w-80 rounded-full bg-light-purple pt-[120%];
+  //   width: 120%;
+  // }
+}
