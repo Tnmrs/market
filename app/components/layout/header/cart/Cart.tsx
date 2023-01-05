@@ -43,7 +43,14 @@ const Cart: FC = () => {
             </div>
           </DrawerBody>
 
-          <DrawerFooter>
+          <DrawerFooter
+            justifyContent="space-between"
+            borderTopColor={'#F7F4F0'}
+            borderTopWidth={1}>
+            <div className={styles.footer}>
+              <div>Total:</div>
+              <div>$1000</div>
+            </div>
             <Button colorScheme="green">CheckOut</Button>
           </DrawerFooter>
         </DrawerContent>

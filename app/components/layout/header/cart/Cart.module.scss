@@ -12,14 +12,22 @@
 }
 
 .cart {
-  @apply p-5;
   .item {
-    @apply mb-4 flex items-center;
+    @apply mb-8 flex items-center gap-3;
   }
   .name {
-    @apply ml-2;
+    @apply font-semibold tracking-widest;
   }
   .price {
-    @apply ml-2;
+    @apply text-sm text-light-gray;
+  }
+}
+
+.footer {
+  > div:first-child {
+    @apply text-sm text-light-gray;
+  }
+  > div:last-child {
+    @apply text-lg font-semibold;
   }
 }

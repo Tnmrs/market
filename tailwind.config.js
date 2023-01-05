@@ -11,7 +11,7 @@ const constants = {
   white: '#ffffff',
   red: '#FF4A55',
   gray: '#8E8EA1',
-  'light-gray': '#F5F5F5',
+  'light-gray': '#D3D3D3',
   'light-green': '#ebfff7',
   'light-purple': '#f1e6ff',
 };
