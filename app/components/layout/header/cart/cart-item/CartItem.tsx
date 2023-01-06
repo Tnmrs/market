@@ -2,7 +2,7 @@ import CartActions from './cart-actions/CartActions';
 import { FC } from 'react';
 import { ICartItem } from '../../../../../types/cart.interface';
 import Image from 'next/image';
-import { formatToCurrency } from '@//utills/format-to-currence';
+import { formatToCurrency } from '@//utils/format-to-currency';
 import styles from '../Cart.module.scss';
 
 const CartItem: FC<{ item: ICartItem }> = ({ item }) => {

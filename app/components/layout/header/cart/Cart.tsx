@@ -11,17 +11,15 @@ import {
 import { FC, useRef, useState } from 'react';
 
 import CartItem from './cart-item/CartItem';
-import { formatToCurrency } from '@//utills/format-to-currence';
+import { formatToCurrency } from '@//utils/format-to-currency';
 import styles from '../cart/Cart.module.scss';
-import { useTypedSelector } from '@//hooks/useTypedSelector';
+import { useCart } from '@//hooks/useCart';
 
 const Cart: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef<HTMLButtonElement>(null);
 
-  const cart = useTypedSelector((state) => state.cart.items);
-
-  const total = cart.reduce((acc, item) => acc + item.product.price, 0);
+  const { cart, total } = useCart();
 
   return (
     <div className={styles['wrapper-cart']}>
@@ -42,9 +40,11 @@ const Cart: FC = () => {
 
           <DrawerBody>
             <div className={styles.cart}>
-              {cart.map((item) => (
-                <CartItem item={item} key={item.id} />
-              ))}
+              {cart.length ? (
+                cart.map((item) => <CartItem item={item} key={item.id} />)
+              ) : (
+                <div>Add something to your shopping cart to make a purchase</div>
+              )}
             </div>
           </DrawerBody>
 

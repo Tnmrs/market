@@ -5,3 +5,7 @@ export interface IInitialState {
 }
 
 export interface IAddToCardPayload extends Omit<ICartItem, 'id'> {}
+
+export interface IChangeQuantityPayload extends Pick<ICartItem, 'id'> {
+  type: 'minus' | 'plus';
+}
