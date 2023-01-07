@@ -1,5 +1,4 @@
-import { bindActionCreators, bindActions } from 'redux';
-
+import { bindActionCreators } from 'redux';
 import { cartSlice } from '../store/slice';
 import { useDispatch } from 'react-redux';
 import { useMemo } from 'react';

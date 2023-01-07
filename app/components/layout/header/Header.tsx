@@ -1,9 +1,9 @@
-import { FC } from 'react';
-
 import Cart from './cart/Cart';
-import styles from './Header.module.scss';
+import { FC } from 'react';
+import Layout from '../Layout';
 import Menu from './menu/Menu';
 import Search from './search/Search';
+import styles from './Header.module.scss';
 
 const Header: FC = () => {
   return (

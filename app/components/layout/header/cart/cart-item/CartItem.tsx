@@ -12,6 +12,8 @@ const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
       <div>
         <div className={styles.name}>{item.product.name}</div>
         <div className={styles.price}>{formatToCurrency(item.product.price)}</div>
+
+        <div className={styles.variation}>{item.size}</div>
         <CartActions item={item} />
       </div>
     </div>

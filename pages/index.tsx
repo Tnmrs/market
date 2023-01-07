@@ -1,11 +1,9 @@
-import { Inter } from '@next/font/google';
-import Header from '../app/components/layout/header/Header';
-import Menu from '../app/components/layout/header/menu/Menu';
 
-import Layout from '../app/components/layout/Layout';
+import Home from '@/screens/home/Home';
+import { NextPage } from 'next';
 
-const inter = Inter({ subsets: ['latin'] });
+const HomePage: NextPage = () => {
+  return <Home />;
+};
 
-export default function Home() {
-  return <Header />;
-}
+export default HomePage;

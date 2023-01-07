@@ -6,14 +6,16 @@ const constants = {
   purple: '#6160DC',
   blue: '#03DAF2',
   orange: '#FFB74A',
-  green: '#00A389',
+  green: '#47B17C',
   black: '#222',
   white: '#ffffff',
   red: '#FF4A55',
-  gray: '#8E8EA1',
-  'light-gray': '#D3D3D3',
+  gray: '#B9B9B9',
+  'light-gray': '#FCFCFC',
   'light-green': '#ebfff7',
   'light-purple': '#f1e6ff',
+  grey2: '#f2f2f2',
+  grey3: '#585858',
 };
 module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './app/**/*.{js,ts,jsx,tsx}'],
@@ -24,6 +26,7 @@ module.exports = {
     },
     extend: {
       fontSize: {
+        s: '0.59rem',
         xs: '0.82rem',
         sm: '0.98rem',
         base: '1.15rem',

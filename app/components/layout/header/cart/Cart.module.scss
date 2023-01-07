@@ -19,7 +19,11 @@
     @apply font-semibold tracking-widest;
   }
   .price {
-    @apply text-sm text-light-gray;
+    @apply mt-1 text-sm text-gray;
+  }
+
+  .variation {
+    @apply mt-1  text-sm text-gray;
   }
 }
 
