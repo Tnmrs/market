@@ -1,0 +1,18 @@
+.navigation {
+  @apply relative;
+  .image {
+    @apply -mt-[3.5rem];
+    padding-top: 40px;
+  }
+
+  .arrows {
+    @apply absolute flex  items-center justify-between;
+    top: 50%;
+    width: 105%;
+    left: -2%;
+
+    .arrow {
+      @apply text-white;
+    }
+  }
+}

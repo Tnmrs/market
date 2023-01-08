@@ -54,7 +54,11 @@
     &::before {
       @apply absolute top-0 left-0 h-full w-full rounded-3xl;
       content: '';
-      background-image: linear-gradient(0deg, rgb(58, 91, 120) 39%, rgba(255, 255, 255, 0.7) 100%);
+      background-image: linear-gradient(
+        0deg,
+        rgb(219, 213, 213) 39%,
+        rgba(255, 255, 255, 0.7) 100%
+      );
     }
 
     .heading {

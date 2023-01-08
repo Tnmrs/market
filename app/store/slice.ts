@@ -6,7 +6,6 @@ import {
 } from './types';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-import { arch } from 'os';
 import { cart } from '../data/cart.data';
 
 const initialState: IInitialState = {
