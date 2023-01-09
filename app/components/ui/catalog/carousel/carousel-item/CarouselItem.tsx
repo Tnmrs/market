@@ -1,45 +1,43 @@
-import { ArrowLeftIcon, ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import { Dispatch, FC, SetStateAction, useState } from 'react';
+import { FC, useState } from 'react';
 
-import { Button } from '@chakra-ui/react';
 import CarouselButton from './CarouselButton';
 import CarouselNavigation from './carousel-navigation/CarouselNavigation';
 import CarouselVariations from './CarouselVariations';
 import { ICarouselItem } from './carousel.interface';
-import { IProduct } from '@//types/product.interface';
-import Image from 'next/image';
-import { TypeSize } from '@//store/types';
+import { TypeSize } from '@//store/cart/cart.types';
 import cn from 'clsx';
+import { motion } from 'framer-motion';
 import styles from '../Carousel.module.scss';
+import { useActions } from '@//hooks/useActions';
+import { useCarousel } from '../useCarousel';
 
-const CarouselItem: FC<ICarouselItem> = ({
-  product,
-  isActive,
-  selectItem,
-  prevHandler,
-  nextHandler,
-}) => {
+const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
   const [selectedSize, setSelectedSize] = useState<TypeSize>('42 EU');
 
+  const { selectedItemIndex } = useCarousel();
+  const { selectSlide } = useActions();
+  const isActive = index == selectedItemIndex;
+
   return (
-    <button
+    <motion.div
       className={cn(styles.item, {
         [styles.active]: isActive,
       })}
-      onClick={selectItem}
+      initial={{ scale: 1 }}
+      animate={isActive ? { scale: 1.12 } : {}}
+      transition={{ duration: 0.8, type: 'tween' }}
       aria-label="Select item"
       role="button">
       <div>
         <CarouselNavigation
-          isActive={isActive}
-          nextHandler={nextHandler}
-          prevHandler={prevHandler}
+          onSelectSlide={() => selectSlide(index)}
           product={product}
+          isActive={isActive}
         />
 
-        <div className={styles.heading}>
-          <div>{product.name}</div>
-        </div>
+        <button className={styles.heading} onClick={() => selectSlide(index)}>
+          <span>{product.name}</span>
+        </button>
 
         {isActive ? (
           <>
@@ -54,7 +52,7 @@ const CarouselItem: FC<ICarouselItem> = ({
           <div className={styles.description}>{product.description}</div>
         )}
       </div>
-    </button>
+    </motion.div>
   );
 };
 

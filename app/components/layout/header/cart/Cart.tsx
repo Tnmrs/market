@@ -56,7 +56,7 @@ const Cart: FC = () => {
               <div>Total:</div>
               <div>{formatToCurrency(total)}</div>
             </div>
-            <Button colorScheme="green">CheckOut</Button>
+            <Button colorScheme="blackAlpha">CheckOut</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
