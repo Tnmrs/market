@@ -2,11 +2,22 @@
   @apply mr-20;
   .heading {
     @apply flex items-center;
+
     .badge {
       @apply mr-4 flex h-5 w-5 items-center justify-center rounded-full bg-red p-1  text-sm text-white;
     }
     .text {
       @apply tracking-widest;
+    }
+
+    .bag {
+      color: black;
+      opacity: 1;
+    }
+
+    .bag:hover {
+      color: black;
+      opacity: 0.3;
     }
   }
 }

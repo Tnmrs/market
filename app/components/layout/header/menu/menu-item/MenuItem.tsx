@@ -1,7 +1,6 @@
 import { FC } from 'react';
-import Link from 'next/link';
-
 import { IMenuLink } from './menu-item.interface';
+import Link from 'next/link';
 
 interface IMenuItem {
   item: IMenuLink;
