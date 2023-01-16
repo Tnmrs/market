@@ -9,9 +9,10 @@ const Home: FC = () => {
     <Layout
       title="Home"
       description="Мультибрендовый магазин одежды, обуви и аксессуаров премиум класса ➤ интернет-магазин стильной и модной одежды в Москве">
-      <Heading className="ml-auto  w-2/3 text-right text-9xl text-gray">
-        The NEW COLLECTION IS NOW AVAILABLE!
+      <Heading className="text-gray' ml-auto w-2/3 text-right text-6x1 font-black">
+        THE NEW COLLECTION IS NOW AVAILABLE!
       </Heading>
+
       <Catalog products={products} />
     </Layout>
   );

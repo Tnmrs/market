@@ -4,6 +4,7 @@ import CarouselButton from './CarouselButton';
 import CarouselNavigation from './carousel-navigation/CarouselNavigation';
 import CarouselVariations from './CarouselVariations';
 import { ICarouselItem } from './carousel.interface';
+import { Link } from '@chakra-ui/react';
 import { TypeSize } from '@//store/cart/cart.types';
 import cn from 'clsx';
 import { motion } from 'framer-motion';
@@ -47,6 +48,9 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
               setSelectedSize={setSelectedSize}
             />
             <CarouselButton product={product} selectedSize={selectedSize} />
+            <Link href={`/product/${product.slug}`} className={styles.link}>
+              More information
+            </Link>
           </>
         ) : (
           <div className={styles.description}>{product.description}</div>

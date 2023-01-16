@@ -1,17 +1,16 @@
 import { FC, PropsWithChildren } from 'react';
 
 import Header from './header/Header';
-import Home from '@/screens/home/Home';
 import { ISeo } from './meta/meta.interface';
 import Meta from './meta/Meta';
 import styles from './Layout.module.scss';
 
 interface ILayout extends ISeo {}
 
-const Layout: FC<PropsWithChildren<ILayout>> = ({ children }) => {
+const Layout: FC<PropsWithChildren<ILayout>> = ({ children, ...rest }) => {
   return (
     <>
-      {/* <Meta {...rest} /> */}
+      <Meta {...rest} />
       <div className={styles.layout}>
         <main>
           <Header />
