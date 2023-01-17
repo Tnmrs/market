@@ -8,6 +8,7 @@ import { useProductNavigation } from './useProductNavigation';
 
 const ProductNavigation: FC<{ productId: number }> = ({ productId }) => {
   const { nextProductSlug, prevProductSlug } = useProductNavigation(productId);
+
   return (
     <div className={styles.nav}>
       <Link
@@ -20,7 +21,7 @@ const ProductNavigation: FC<{ productId: number }> = ({ productId }) => {
       <Link
         href={`/product/${nextProductSlug}`}
         className={cn({
-          disabled: !prevProductSlug,
+          disabled: !nextProductSlug,
         })}>
         <ChevronRightIcon fontSize={46} />
       </Link>

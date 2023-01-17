@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Heading } from '@chakra-ui/react';
 import { IProductDetails } from '@//../pages/product/[slug]';
 import Layout from '@/layout/Layout';
+import ProductCard from './product-card/ProductCard';
 import ProductNavigation from './product-navigation/ProductNavigation';
 
 const ProductDetails: FC<IProductDetails> = ({ product }) => {
@@ -15,6 +16,8 @@ const ProductDetails: FC<IProductDetails> = ({ product }) => {
         <Breadcrumbs product={product} />
         <ProductNavigation productId={product.id} />
       </div>
+
+      <ProductCard />
     </Layout>
   );
 };

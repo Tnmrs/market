@@ -9,5 +9,5 @@ body {
   pointer-events: none;
   cursor: default;
   text-decoration: none;
-  opacity: 50;
+  opacity: 0.3 !important;
 }
