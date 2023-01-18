@@ -6,12 +6,12 @@ import { TypeSize } from '@//store/cart/cart.types';
 import { useActions } from '@//hooks/useActions';
 import { useCart } from '@//hooks/useCart';
 
-interface ICarouselButton {
+interface IAddToCartButton {
   product: IProduct;
   selectedSize: TypeSize;
 }
 
-const CarouselButton: FC<ICarouselButton> = ({ product, selectedSize }) => {
+const AddToCartButton: FC<IAddToCartButton> = ({ product, selectedSize }) => {
   const { addToCart, removeFromCart } = useActions();
   const { cart } = useCart();
 
@@ -44,4 +44,4 @@ const CarouselButton: FC<ICarouselButton> = ({ product, selectedSize }) => {
   );
 };
 
-export default CarouselButton;
+export default AddToCartButton;

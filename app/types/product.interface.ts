@@ -7,3 +7,6 @@ export interface IProduct {
   reviews: [];
   images: string[];
 }
+export interface IProductDetails {
+  product: IProduct;
+}

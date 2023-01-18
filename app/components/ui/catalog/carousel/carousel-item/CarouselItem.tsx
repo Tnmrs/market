@@ -1,10 +1,10 @@
 import { FC, useState } from 'react';
 
-import CarouselButton from './CarouselButton';
+import CarouselButton from './AddToCartButton';
 import CarouselNavigation from './carousel-navigation/CarouselNavigation';
-import CarouselVariations from './CarouselVariations';
 import { ICarouselItem } from './carousel.interface';
 import { Link } from '@chakra-ui/react';
+import SizeVariations from './SizeVariations';
 import { TypeSize } from '@//store/cart/cart.types';
 import cn from 'clsx';
 import { motion } from 'framer-motion';
@@ -42,7 +42,7 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
 
         {isActive ? (
           <>
-            <CarouselVariations
+            <SizeVariations
               productId={product.id}
               selectedSize={selectedSize}
               setSelectedSize={setSelectedSize}
