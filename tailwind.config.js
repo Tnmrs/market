@@ -16,6 +16,7 @@ const constants = {
   'light-purple': '#f1e6ff',
   grey2: '#f2f2f2',
   grey3: '#585858',
+  ivory: '#D3D3D3',
 };
 module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './app/**/*.{js,ts,jsx,tsx}'],

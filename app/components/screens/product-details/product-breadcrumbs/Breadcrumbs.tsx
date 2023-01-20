@@ -2,7 +2,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
 
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { FC } from 'react';
-import { IProductDetails } from '@//../pages/product/[slug]';
+import { IProductDetails } from '@//types/product.interface';
 import Link from 'next/link';
 
 const Breadcrumbs: FC<IProductDetails> = ({ product }) => {

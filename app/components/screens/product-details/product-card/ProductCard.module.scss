@@ -1,0 +1,39 @@
+.card {
+  @apply relative mb-8 grid grid-cols-3 gap-5 bg-ivory p-10;
+  border-radius: 2rem;
+  .information {
+    > h2 {
+      @apply mb-5 text-2xl font-bold leading-tight text-grey3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    > div {
+      @apply mb-10;
+
+      > p {
+        @apply mb-4 text-grey3;
+      }
+    }
+    > button {
+      @apply mr-4 rounded-2xl bg-white p-4 last:mr-0;
+    }
+  }
+
+  .image {
+    @apply text-center;
+
+    .main {
+      @apply mx-auto w-max overflow-hidden rounded-full bg-white p-5;
+    }
+
+    .price {
+      @apply -mt-12 text-3xl font-bold text-grey3;
+    }
+  }
+
+  .variations {
+  }
+}
