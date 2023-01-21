@@ -1,4 +1,5 @@
 import { IProduct } from '@//types/product.interface';
+import { reviews } from './review.data';
 
 export const products: IProduct[] = [
   {
@@ -9,7 +10,7 @@ export const products: IProduct[] = [
     slug: 'adidas-yezzy-boost-350-v2-(white)',
     images: ['/images/products/air2.png', '/images/products/air2.png', '/images/products/air2.png'],
     price: 200,
-    reviews: [],
+    reviews: [reviews[0], reviews[1], reviews[2]],
   },
 
   {

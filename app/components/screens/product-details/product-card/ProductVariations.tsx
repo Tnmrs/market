@@ -12,7 +12,7 @@ const ProductVariations: FC<IProductDetails> = ({ product }) => {
 
   return (
     <div className={styles.variations}>
-      <ProductRating />
+      <ProductRating product={product} />
       <SizeVariations selectedSize={selectedSize} setSelectedSize={setSelectedSize} productId={0} />
       <AddToCartButton product={product} selectedSize={selectedSize} />
     </div>

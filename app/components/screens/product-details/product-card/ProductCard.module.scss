@@ -30,10 +30,16 @@
     }
 
     .price {
-      @apply -mt-12 text-3xl font-bold text-grey3;
+      @apply -mt-12 -mb-4 text-3xl font-bold text-grey3;
     }
   }
 
   .variations {
+    .rating {
+      @apply flex items-center;
+      > span {
+        @apply mr-5  text-sm font-bold;
+      }
+    }
   }
 }
