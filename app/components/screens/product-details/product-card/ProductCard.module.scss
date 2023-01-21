@@ -19,11 +19,16 @@
     }
     > button {
       @apply mr-4 rounded-2xl bg-white p-4 last:mr-0;
+
+      &.active {
+        @apply bg-gray;
+      }
     }
   }
 
   .image {
     @apply text-center;
+    margin-bottom: 20px;
 
     .main {
       @apply mx-auto w-max overflow-hidden rounded-full bg-white p-5;

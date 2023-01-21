@@ -1,10 +1,12 @@
 import Breadcrumbs from './product-breadcrumbs/Breadcrumbs';
+import Catalog from '@/ui/catalog/Catalog';
 import { FC } from 'react';
 import { Heading } from '@chakra-ui/react';
 import { IProductDetails } from '@//types/product.interface';
 import Layout from '@/layout/Layout';
 import ProductCard from './product-card/ProductCard';
 import ProductNavigation from './product-navigation/ProductNavigation';
+import { products } from '@//data/product.data';
 
 const ProductDetails: FC<IProductDetails> = ({ product }) => {
   return (
@@ -16,6 +18,8 @@ const ProductDetails: FC<IProductDetails> = ({ product }) => {
       </div>
 
       <ProductCard product={product} />
+
+      <Catalog products={products} />
     </Layout>
   );
 };

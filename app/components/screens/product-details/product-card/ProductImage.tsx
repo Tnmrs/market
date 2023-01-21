@@ -4,11 +4,20 @@ import Image from 'next/image';
 import { formatToCurrency } from '@//utils/format-to-currency';
 import styles from './ProductCard.module.scss';
 
-const ProductImage: FC<IProductDetails> = ({ product }) => {
+interface IProductImage extends IProductDetails {
+  currentImageIndex: number;
+}
+
+const ProductImage: FC<IProductImage> = ({ product, currentImageIndex }) => {
   return (
     <div className={styles.image}>
       <div className={styles.main}>
-        <Image src={product.images[0]} alt={product.name} width={350} height={350} />
+        <Image
+          src={product.images[currentImageIndex]}
+          alt={product.name}
+          width={350}
+          height={350}
+        />
       </div>
       <div className={styles.price}>{formatToCurrency(product.price)}</div>
     </div>
