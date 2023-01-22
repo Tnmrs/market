@@ -17,7 +17,10 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
 
   const { selectedItemIndex } = useCarousel();
   const { selectSlide } = useActions();
-  const isActive = index == selectedItemIndex;
+  // const isActive = index == selectedItemIndex;
+
+  const [isClicked, setIsClicked] = useState(false);
+  const isActive = index == selectedItemIndex && isClicked;
 
   return (
     <motion.div
@@ -36,7 +39,12 @@ const CarouselItem: FC<ICarouselItem> = ({ product, index }) => {
           isActive={isActive}
         />
 
-        <button className={styles.heading} onClick={() => selectSlide(index)}>
+        <button
+          className={styles.heading}
+          onClick={() => {
+            selectSlide(index);
+            setIsClicked(!isClicked);
+          }}>
           <span>{product.name}</span>
         </button>
 

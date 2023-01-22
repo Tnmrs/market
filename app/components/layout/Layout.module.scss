@@ -1,8 +1,23 @@
 .layout {
   > main {
-    @apply bg-white;
+    background: #052659; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to bottom,
+      #0778ca,
+      #052659
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      #0991f2,
+      #052659
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     > .content {
       @apply relative mx-auto  max-w-7xl;
+      border-radius: 70px;
+      background: #f87201;
+      -webkit-box-shadow: 0px 42px 51px 66px rgba(0, 0, 0, 0.27);
+      -moz-box-shadow: 0px 42px 51px 66px rgba(0, 0, 0, 0.27);
+      box-shadow: 0px 42px 51px 66px rgba(0, 0, 0, 0.27);
     }
   }
 }

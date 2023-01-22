@@ -1,4 +1,4 @@
-import { IProduct } from '@//types/product.interface';
+import { IProduct } from '@/types/product.interface';
 import { reviews } from './review.data';
 
 export const products: IProduct[] = [
@@ -90,3 +90,4 @@ export const products: IProduct[] = [
     reviews: [],
   },
 ];
+``;

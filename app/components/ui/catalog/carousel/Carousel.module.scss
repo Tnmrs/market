@@ -1,11 +1,21 @@
 .carousel {
-  @apply mt-20 grid grid-cols-4 gap-8;
+  @apply grid grid-cols-4 gap-8;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 90px;
 }
 .item {
-  @apply mb-8 rounded-3xl bg-grey2 p-5 pt-2;
+  @apply mb-8 rounded-3xl  p-5 pt-2;
+  background: #1f1c2c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #928dab, #1f1c2c); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #09022c,
+    #000211
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   .heading {
-    @apply text-left text-2xl font-bold leading-6 text-black;
+    @apply text-left text-2xl font-bold leading-6 text-[#E26107];
     // will-change: transform;
     // backface-visibility: hidden;
 
@@ -32,7 +42,7 @@
 
   &.active {
     @apply bg-green bg-cover bg-no-repeat p-7 pt-0 shadow-2xl shadow-black;
-    // transform: scale(1.12);
+    transform: scale(1.12);
     background-image: url('/images/bg-pattern.jpeg');
     background-position: center -120px;
 

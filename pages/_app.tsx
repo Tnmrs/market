@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ChakraProvider>
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
         </ChakraProvider>
       </PersistGate>
     </Provider>

@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { IProductDetails } from '@//types/product.interface';
+import { IProductDetails } from '@/types/product.interface';
 import ProductImage from './ProductImage';
 import ProductInformation from './ProductInformation';
 import ProductVariations from './ProductVariations';
