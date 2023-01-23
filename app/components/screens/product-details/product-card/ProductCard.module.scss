@@ -1,6 +1,7 @@
 .card {
   @apply relative mb-8 grid grid-cols-3 gap-5 bg-ivory p-10;
   border-radius: 2rem;
+
   .information {
     > h2 {
       @apply mb-5 text-2xl font-bold leading-tight text-grey3;

@@ -1,10 +1,13 @@
 .header {
   @apply mb-12 flex w-full items-center justify-between;
+  margin-bottom: 40px;
   // position: fixed;
   height: 100px;
-  width: 100%;
-  background: #fff;
+
+  background: black;
+  color: white;
+
   z-index: 100;
-  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  // -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  // box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 }

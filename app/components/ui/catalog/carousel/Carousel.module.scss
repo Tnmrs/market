@@ -1,8 +1,9 @@
 .carousel {
-  @apply grid grid-cols-4 gap-8;
-  margin-left: 40px;
-  margin-right: 40px;
+  @apply grid grid-cols-4 gap-14;
+
   margin-top: 90px;
+  margin-left: 250px;
+  margin-right: 240px;
 }
 .item {
   @apply mb-8 rounded-3xl  p-5 pt-2;
